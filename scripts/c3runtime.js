@@ -1392,6 +1392,7 @@ self.C3_ExpressionFuncs = [
 		() => "",
 		() => "popup_Stop",
 		() => "popup_EX",
+		() => 10,
 		() => 1,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -1400,12 +1401,16 @@ self.C3_ExpressionFuncs = [
 		() => "+",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => Math.round(f0(1, 20));
+			return () => Math.round(f0(1, 30));
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
 			const v1 = p._GetNode(1).GetVar();
 			return () => (v0.GetValue() + v1.GetValue());
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => Math.floor(f0(1, 5));
 		},
 		p => {
 			const v0 = p._GetNode(0).GetVar();
@@ -1414,11 +1419,24 @@ self.C3_ExpressionFuncs = [
 			return () => (and(((and(v0.GetValue(), " ") + v1.GetValue()) + " "), v2.GetValue()) + "= ?");
 		},
 		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const v1 = p._GetNode(1).GetVar();
-			const v2 = p._GetNode(2).GetVar();
-			return () => Math.floor(f0((v1.GetValue() - 20), (v2.GetValue() + 20)));
+			const v0 = p._GetNode(0).GetVar();
+			return () => (v0.GetValue()).toString();
 		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ((v0.GetValue() + 1)).toString();
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ((v0.GetValue() + 2)).toString();
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ((v0.GetValue() + 3)).toString();
+		},
+		() => 2,
+		() => 3,
+		() => 4,
 		() => 15,
 		() => "0",
 		() => "GAME OVER",
@@ -1426,17 +1444,16 @@ self.C3_ExpressionFuncs = [
 			const n0 = p._GetNode(0);
 			return () => n0.ExpObject();
 		},
+		() => "ตอบถูก",
+		() => "sh",
+		() => 0.4,
 		() => "ตอบผิด",
+		() => 0.8,
 		() => 0.1,
 		p => {
 			const n0 = p._GetNode(0);
 			return () => (n0.ExpObject() - 35);
 		},
-		() => "ตอบถูก",
-		() => "sh",
-		() => 0.5,
-		() => "popup_GOV",
-		() => 10,
 		() => 70,
 		() => 180,
 		() => 5,
@@ -1453,20 +1470,8 @@ self.C3_ExpressionFuncs = [
 			const v1 = p._GetNode(1).GetVar();
 			return () => (v0.GetValue() - v1.GetValue());
 		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			const v2 = p._GetNode(2).GetVar();
-			const v3 = p._GetNode(3).GetVar();
-			return () => f0(1, Math.floor(f1((v2.GetValue() - 5), (v3.GetValue() + 6))));
-		},
-		() => 0.4,
 		() => 60,
 		() => "x",
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => Math.round(f0(2, 12));
-		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => Math.round(f0(1, 12));
@@ -1476,31 +1481,22 @@ self.C3_ExpressionFuncs = [
 			const v1 = p._GetNode(1).GetVar();
 			return () => (v0.GetValue() * v1.GetValue());
 		},
-		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
-			const f1 = p._GetNode(1).GetBoundMethod();
-			const v2 = p._GetNode(2).GetVar();
-			const v3 = p._GetNode(3).GetVar();
-			return () => f0(1, Math.floor(f1((v2.GetValue() - 8), (v3.GetValue() + 9))));
-		},
 		() => 20,
-		() => 30,
+		() => -10,
 		() => "÷",
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => Math.floor(f0(2, 11));
+			return () => Math.floor(f0(2, 10));
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
-			return () => Math.floor(f0(2, 13));
+			return () => Math.floor(f0(1, 13));
 		},
 		p => {
-			const f0 = p._GetNode(0).GetBoundMethod();
+			const v0 = p._GetNode(0).GetVar();
 			const v1 = p._GetNode(1).GetVar();
-			return () => Math.floor(f0(v1.GetValue()));
-		},
-		() => 90,
-		() => 3
+			return () => ((((v0.GetValue()).toString() + " ÷ ") + (v1.GetValue()).toString()) + " = ?");
+		}
 ];
 
 

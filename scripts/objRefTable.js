@@ -25,19 +25,18 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.System.Exps.random,
-		C3.Plugins.System.Cnds.ForEach,
 		C3.Plugins.System.Cnds.PickRandom,
 		C3.Plugins.System.Cnds.Every,
 		C3.Plugins.System.Acts.SubVar,
+		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.Text.Exps.Text,
+		C3.Plugins.Sprite.Acts.SetAnim,
 		C3.Plugins.System.Acts.Wait,
+		C3.Plugins.Sprite.Acts.Spawn,
+		C3.Plugins.System.Acts.AddVar,
 		C3.Behaviors.Flash.Acts.Flash,
 		C3.Plugins.TiledBg.Acts.SetWidth,
 		C3.Plugins.TiledBg.Exps.Width,
-		C3.Plugins.System.Cnds.Else,
-		C3.Plugins.Sprite.Acts.SetAnim,
-		C3.Plugins.Sprite.Acts.Spawn,
-		C3.Plugins.System.Acts.AddVar,
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Plugins.Sprite.Acts.Destroy,
 		C3.Plugins.TiledBg.Cnds.CompareWidth,
@@ -46,8 +45,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Bullet.Acts.SetAngleOfMotion,
 		C3.Plugins.System.Acts.CreateObject,
 		C3.Plugins.System.Acts.RestartLayout,
-		C3.Plugins.System.Acts.ResetGlobals,
-		C3.Plugins.System.Exps.max
+		C3.Plugins.System.Acts.ResetGlobals
 	];
 };
 self.C3_JsPropNameTable = [
@@ -70,7 +68,6 @@ self.C3_JsPropNameTable = [
 	{T_SC: 0},
 	{T_Question: 0},
 	{T_TM: 0},
-	{ChoiceIndex: 0},
 	{T_Choice: 0},
 	{TB_heart: 0},
 	{T_Check: 0},
@@ -105,18 +102,19 @@ self.C3_JsPropNameTable = [
 	{Sprite3: 0},
 	{Audio: 0},
 	{Button: 0},
-	{Ar_Choice: 0},
-	{AnswerB: 0},
-	{AnswerC: 0},
-	{AnswerD: 0},
-	{AnswerA: 0},
+	{A_Choice: 0},
+	{TxtAnswer1: 0},
+	{TxtAnswer2: 0},
+	{TxtAnswer3: 0},
+	{TxtAnswer4: 0},
 	{Result: 0},
 	{Answer: 0},
 	{Score: 0},
 	{Timer: 0},
 	{Operator: 0},
 	{Num1: 0},
-	{Num2: 0}
+	{Num2: 0},
+	{CorrectPosition: 0}
 ];
 
 self.InstanceType = {
@@ -170,9 +168,9 @@ self.InstanceType = {
 	Sprite3: class extends self.ISpriteInstance {},
 	Audio: class extends self.IInstance {},
 	Button: class extends self.IButtonInstance {},
-	Ar_Choice: class extends self.IArrayInstance {},
-	AnswerB: class extends self.ITextInstance {},
-	AnswerC: class extends self.ITextInstance {},
-	AnswerD: class extends self.ITextInstance {},
-	AnswerA: class extends self.ITextInstance {}
+	A_Choice: class extends self.IArrayInstance {},
+	TxtAnswer1: class extends self.ITextInstance {},
+	TxtAnswer2: class extends self.ITextInstance {},
+	TxtAnswer3: class extends self.ITextInstance {},
+	TxtAnswer4: class extends self.ITextInstance {}
 }
