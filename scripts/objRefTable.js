@@ -13,8 +13,13 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Button,
 		C3.Plugins.Arr,
 		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.Audio.Cnds.IsTagPlaying,
 		C3.Plugins.Audio.Acts.Play,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
+		C3.Plugins.Sprite.Cnds.CompareFrame,
+		C3.Plugins.Audio.Acts.SetMuted,
 		C3.Plugins.System.Acts.GoToLayout,
 		C3.Plugins.Browser.Acts.Close,
 		C3.Plugins.System.Acts.SetLayerVisible,
@@ -107,6 +112,9 @@ self.C3_JsPropNameTable = [
 	{TxtAnswer2: 0},
 	{TxtAnswer3: 0},
 	{TxtAnswer4: 0},
+	{STUp: 0},
+	{STDown: 0},
+	{STMute: 0},
 	{Result: 0},
 	{Answer: 0},
 	{Score: 0},
@@ -172,5 +180,8 @@ self.InstanceType = {
 	TxtAnswer1: class extends self.ITextInstance {},
 	TxtAnswer2: class extends self.ITextInstance {},
 	TxtAnswer3: class extends self.ITextInstance {},
-	TxtAnswer4: class extends self.ITextInstance {}
+	TxtAnswer4: class extends self.ITextInstance {},
+	STUp: class extends self.ISpriteInstance {},
+	STDown: class extends self.ISpriteInstance {},
+	STMute: class extends self.ISpriteInstance {}
 }
